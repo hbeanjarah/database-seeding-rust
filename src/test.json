@@ -1,0 +1,294 @@
+[
+  {
+    "googleAudienceId": 2004,
+    "title": "Afghanistan",
+    "canonicalName": "Afghanistan",
+    "countryCode": "AF",
+    "targetType": "Country",
+    "Status": "Active",
+    "children": [
+      {
+        "googleAudienceId": 9075386,
+        "title": "Jowzjan",
+        "canonicalName": "Jowzjan,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075387,
+        "title": "Paktika",
+        "canonicalName": "Paktika,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075388,
+        "title": "Khost",
+        "canonicalName": "Khost,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075389,
+        "title": "Farah",
+        "canonicalName": "Farah,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075390,
+        "title": "Helmand",
+        "canonicalName": "Helmand,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075391,
+        "title": "Nimruz",
+        "canonicalName": "Nimruz,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075392,
+        "title": "Wardak",
+        "canonicalName": "Wardak,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075393,
+        "title": "Kabul",
+        "canonicalName": "Kabul,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": [
+          {
+            "googleAudienceId": 1000002,
+            "title": "Kabul",
+            "canonicalName": "Kabul,Kabul,Afghanistan",
+            "parentId": 9075393,
+            "countryCode": "AF",
+            "targetType": "City",
+            "Status": "Active",
+            "children": []
+          }
+        ]
+      },
+      {
+        "googleAudienceId": 9075394,
+        "title": "Sar-e Pol",
+        "canonicalName": "Sar-e Pol,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075395,
+        "title": "Ghor",
+        "canonicalName": "Ghor,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075396,
+        "title": "Herat",
+        "canonicalName": "Herat,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075397,
+        "title": "Logar",
+        "canonicalName": "Logar,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075398,
+        "title": "Ghazni",
+        "canonicalName": "Ghazni,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075399,
+        "title": "Balkh",
+        "canonicalName": "Balkh,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075400,
+        "title": "Nangarhar",
+        "canonicalName": "Nangarhar,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075401,
+        "title": "Faryab",
+        "canonicalName": "Faryab,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075402,
+        "title": "Bamyan",
+        "canonicalName": "Bamyan,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075403,
+        "title": "Takhar",
+        "canonicalName": "Takhar,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075404,
+        "title": "Kandahar",
+        "canonicalName": "Kandahar,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075405,
+        "title": "Kunduz",
+        "canonicalName": "Kunduz,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075406,
+        "title": "Parwan",
+        "canonicalName": "Parwan,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075407,
+        "title": "Samangan",
+        "canonicalName": "Samangan,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075408,
+        "title": "Baghlan",
+        "canonicalName": "Baghlan,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075409,
+        "title": "Badakhshan",
+        "canonicalName": "Badakhshan,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075410,
+        "title": "Paktia",
+        "canonicalName": "Paktia,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075411,
+        "title": "Laghman",
+        "canonicalName": "Laghman,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      },
+      {
+        "googleAudienceId": 9075412,
+        "title": "Zabul",
+        "canonicalName": "Zabul,Afghanistan",
+        "parentId": 2004,
+        "countryCode": "AF",
+        "targetType": "Province",
+        "Status": "Active",
+        "children": []
+      }
+    ]
+  }
+ 
+]
