@@ -263,7 +263,7 @@ enum TargetType {
     REGION,
     CITY,
     NEIGHBORHOOD,
-    // #[serde(rename = "POSTAL_CODE")]
+    #[serde(rename = "POSTAL_CODE")]
     POSTAL_CODE,
     AIRPORT,
     UNIVERSITY,
@@ -271,23 +271,23 @@ enum TargetType {
     MUNICIPALITY,
     PROVINCE,
     COUNTY,
-    // #[serde(rename = "NATIONAL_PARK")]
+    #[serde(rename = "NATIONAL_PARK")]
     NATIONAL_PARK,
     DISTRICT,
-    // #[serde(rename = "CONGRESSIONAL_DISTRICT")]
+    #[serde(rename = "CONGRESSIONAL_DISTRICT")]
     CONGRESSIONAL_DISTRICT,
     STATE,
-    // #[serde(rename = "CITY_REGION")]
+    #[serde(rename = "CITY_REGION")]
     CITY_REGION,
     GOVERNORATE,
     CANTON,
     TERRITORY,
     PREFECTURE,
-    // #[serde[rename = "AUTONOMOUS_COMMUNITY"]]
+    #[serde[rename = "AUTONOMOUS_COMMUNITY"]]
     AUTONOMOUS_COMMUNITY,
-    // #[serde[rename = "UNION_TERRITORY"]]
+    #[serde[rename = "UNION_TERRITORY"]]
     UNION_TERRITORY,
-    // #[serde[rename = "TV_REGION"]]
+    #[serde[rename = "TV_REGION"]]
     TV_REGION,
     BOROUGH,
     OKRUG,
