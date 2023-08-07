@@ -1,10 +1,10 @@
+use async_recursion::async_recursion;
+use postgres_types::{FromSql, ToSql};
+use serde::{Deserialize, Serialize};
 use std::fs::File;
 use std::io::Read;
 use std::path::Path;
-use postgres_types::{ FromSql, ToSql };
-use tokio_postgres::{ NoTls, Error };
-use serde::{ Deserialize, Serialize };
-use async_recursion::async_recursion;
+use tokio_postgres::{Error, NoTls};
 
 #[derive(Debug, Deserialize, Serialize, ToSql, FromSql)]
 enum CountryCode {
@@ -315,20 +315,26 @@ struct Location {
 async fn insert_data(
     conn: &tokio_postgres::Client,
     data: &Location,
-    parent_id: Option<i32>
+    parent_id: Option<i32>,
 ) -> Result<(), Error> {
+    let mut has_children: bool = false;
+
+    if &data.children.len() > &0 {
+        has_children = true
+    }
     let params: &[&(dyn ToSql + Sync)] = &[
         &data.google_audience_id.to_string(),
         &data.canonical_name,
         &parent_id,
         &data.country_code,
         &data.target_type,
+        &has_children,
     ];
 
     let query =
         "
-    INSERT INTO \"Location\" (\"googleAudienceId\", \"title\", \"parentId\", \"countryCode\", \"targetType\")
-    VALUES ($1, $2, $3, $4, $5)
+    INSERT INTO \"Location\" (\"googleAudienceId\", \"title\", \"parentId\", \"countryCode\", \"targetType\", \"hasChildren\")
+    VALUES ($1, $2, $3, $4, $5, $6)
 ";
 
     conn.execute(query, &params).await?;
@@ -343,9 +349,12 @@ async fn insert_data(
 #[tokio::main]
 async fn main() {
     println!("Hello, world!");
-    let (client, connection) = tokio_postgres
-        ::connect("postgres://postgres:postgres@localhost:5432/personas", NoTls).await
-        .expect("Error connecting to the database");
+    let (client, connection) = tokio_postgres::connect(
+        "postgres://postgres:postgres@localhost:5432/personas",
+        NoTls,
+    )
+    .await
+    .expect("Error connecting to the database");
     tokio::spawn(async move {
         if let Err(e) = connection.await {
             eprintln!("connection error: {}", e);
@@ -357,7 +366,8 @@ async fn main() {
     println!("file path: {:?}", file_path);
     let mut file = File::open(file_path).expect("Error opening file");
     let mut json_data = String::new();
-    file.read_to_string(&mut json_data).expect("Error reading file");
+    file.read_to_string(&mut json_data)
+        .expect("Error reading file");
 
     let data: Vec<Location> = serde_json::from_str(&json_data).expect("Error parsing JSON");
     // println!("passing here: {:?}", &data);
