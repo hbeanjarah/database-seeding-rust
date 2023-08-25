@@ -400,7 +400,6 @@ async fn main() {
 
     let data: Vec<Location> = serde_json::from_str(&json_data).expect("Error parsing JSON");
     for el in &data {
-        println!("passing here");
         if let Err(e) = insert_data(&client, &el, None).await {
             eprintln!("Error inserting data: {}", e);
         }
