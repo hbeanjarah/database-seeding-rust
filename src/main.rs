@@ -1,6 +1,8 @@
 use async_recursion::async_recursion;
+use dotenv::dotenv;
 use postgres_types::{FromSql, ToSql};
 use serde::{Deserialize, Serialize};
+use std::env;
 use std::fs::File;
 use std::io::Read;
 use std::path::Path;
@@ -348,13 +350,40 @@ async fn insert_data(
 
 #[tokio::main]
 async fn main() {
-    println!("Hello, world!");
-    let (client, connection) = tokio_postgres::connect(
-        "postgres://postgres:postgres@localhost:5432/personas",
-        NoTls,
-    )
-    .await
-    .expect("Error connecting to the database");
+    // Attempt to retrieve environment variables
+    let database_name = match env::var("DATABASE_NAME") {
+        Ok(val) => val,
+        Err(_) => {
+            eprintln!("Error: DATABASE_NAME environment variable not set");
+            return; // Exit the program or handle the error as needed
+        }
+    };
+
+    let database_user = match env::var("DATABASE_USER") {
+        Ok(val) => val,
+        Err(_) => {
+            eprintln!("Error: DATABASE_USER environment variable not set");
+            return; // Exit the program or handle the error as needed
+        }
+    };
+
+    let database_password = match env::var("DATABASE_PASSWORD") {
+        Ok(val) => val,
+        Err(_) => {
+            eprintln!("Error: DATABASE_PASSWORD environment variable not set");
+            return; // Exit the program or handle the error as needed
+        }
+    };
+
+    // Construct the database URL
+    let database_url = format!(
+        "postgres://{}:{}@localhost:5432/{}",
+        database_user, database_password, database_name
+    );
+
+    let (client, connection) = tokio_postgres::connect(&database_url, NoTls)
+        .await
+        .expect("Error connecting to the database");
     tokio::spawn(async move {
         if let Err(e) = connection.await {
             eprintln!("connection error: {}", e);
@@ -370,7 +399,6 @@ async fn main() {
         .expect("Error reading file");
 
     let data: Vec<Location> = serde_json::from_str(&json_data).expect("Error parsing JSON");
-    // println!("passing here: {:?}", &data);
     for el in &data {
         println!("passing here");
         if let Err(e) = insert_data(&client, &el, None).await {
