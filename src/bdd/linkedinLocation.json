@@ -1,0 +1,130 @@
+[
+  {
+    "entityTypes": ["COUNTRY_GROUP", "COUNTRY", "STATE", "REGION"],
+    "facetName": "profileLocations",
+    "$URN": "urn:li:adTargetingFacet:profileLocations",
+    "availableEntityFinders": ["AD_TARGETING_FACET", "TYPEAHEAD"],
+    "children": [
+      {
+        "name": "Africa",
+        "urn": "urn:li:countryGroup:AF",
+        "value": {
+          "string": "urn:li:countryGroup:AF"
+        }
+      },
+      {
+        "name": "Antarctica",
+        "urn": "urn:li:countryGroup:AQ",
+        "value": {
+          "string": "urn:li:countryGroup:AQ"
+        }
+      },
+      {
+        "name": "Asia",
+        "urn": "urn:li:countryGroup:AS",
+        "value": {
+          "string": "urn:li:countryGroup:AS"
+        }
+      },
+      {
+        "name": "Europe",
+        "urn": "urn:li:countryGroup:EU",
+        "value": {
+          "string": "urn:li:countryGroup:EU"
+        }
+      },
+      {
+        "name": "Latin America",
+        "urn": "urn:li:countryGroup:LA",
+        "value": {
+          "string": "urn:li:countryGroup:LA"
+        }
+      },
+      {
+        "name": "Middle East",
+        "urn": "urn:li:countryGroup:ME",
+        "value": {
+          "string": "urn:li:countryGroup:ME"
+        }
+      },
+      {
+        "name": "North America",
+        "urn": "urn:li:countryGroup:NA",
+        "value": {
+          "string": "urn:li:countryGroup:NA"
+        }
+      },
+      {
+        "name": "Oceania",
+        "urn": "urn:li:countryGroup:OC",
+        "value": {
+          "string": "urn:li:countryGroup:OC"
+        }
+      }
+    ]
+  },
+  {
+    "entityTypes": ["COUNTRY_GROUP", "COUNTRY", "STATE", "REGION"],
+    "facetName": "locations",
+    "$URN": "urn:li:adTargetingFacet:locations",
+    "availableEntityFinders": ["AD_TARGETING_FACET", "TYPEAHEAD"],
+    "children": [
+      {
+        "name": "Africa",
+        "urn": "urn:li:countryGroup:AF",
+        "value": {
+          "string": "urn:li:countryGroup:AF"
+        }
+      },
+      {
+        "name": "Antarctica",
+        "urn": "urn:li:countryGroup:AQ",
+        "value": {
+          "string": "urn:li:countryGroup:AQ"
+        }
+      },
+      {
+        "name": "Asia",
+        "urn": "urn:li:countryGroup:AS",
+        "value": {
+          "string": "urn:li:countryGroup:AS"
+        }
+      },
+      {
+        "name": "Europe",
+        "urn": "urn:li:countryGroup:EU",
+        "value": {
+          "string": "urn:li:countryGroup:EU"
+        }
+      },
+      {
+        "name": "Latin America",
+        "urn": "urn:li:countryGroup:LA",
+        "value": {
+          "string": "urn:li:countryGroup:LA"
+        }
+      },
+      {
+        "name": "Middle East",
+        "urn": "urn:li:countryGroup:ME",
+        "value": {
+          "string": "urn:li:countryGroup:ME"
+        }
+      },
+      {
+        "name": "North America",
+        "urn": "urn:li:countryGroup:NA",
+        "value": {
+          "string": "urn:li:countryGroup:NA"
+        }
+      },
+      {
+        "name": "Oceania",
+        "urn": "urn:li:countryGroup:OC",
+        "value": {
+          "string": "urn:li:countryGroup:OC"
+        }
+      }
+    ]
+  }
+]
