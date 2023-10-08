@@ -53,12 +53,12 @@ async fn main() {
         }
     });
 
-    let  insert_company: bool;
+    let insert_company: bool;
 
-    insert_company = false;
+    insert_company = true;
 
     if insert_company {
-        let linkedin_company_file_path = Path::new("./src/linkedin_company.json");
+        let linkedin_company_file_path = Path::new("./src/bdd/linkedin_interest.json");
         let mut linkedin_company_file =
             File::open(linkedin_company_file_path).expect("Error opening file");
         let mut linkedin_company_file_path_json_data = String::new();
@@ -70,6 +70,8 @@ async fn main() {
         let linkedin_company_data: Vec<common::ParentEntity> =
             serde_json::from_str(&linkedin_company_file_path_json_data)
                 .expect("Error parsing JSON");
+
+        // println!("linkedin_company_data {:?}", linkedin_company_data);
         for (index, el) in linkedin_company_data.iter().enumerate() {
             if let Err(e) = items::linkedin_company::insert(&client, Some(index as i32), el).await {
                 eprintln!("Error inserting data: {}", e);

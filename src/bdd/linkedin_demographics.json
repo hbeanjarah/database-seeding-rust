@@ -1,0 +1,161 @@
+[
+  {
+    "entityTypes": ["AGE"],
+    "facetName": "ageRanges",
+    "facetUrn": "urn:li:adTargetingFacet:ageRanges",
+    "availableEntityFinders": ["AD_TARGETING_FACET"],
+    "children": [
+      {
+        "name": "18 to 24",
+        "urn": "urn:li:ageRange:(18,24)",
+        "facetUrn": "urn:li:adTargetingFacet:ageRanges"
+      },
+      {
+        "name": "25 to 34",
+        "urn": "urn:li:ageRange:(25,34)",
+        "facetUrn": "urn:li:adTargetingFacet:ageRanges"
+      },
+      {
+        "name": "35 to 54",
+        "urn": "urn:li:ageRange:(35,54)",
+        "facetUrn": "urn:li:adTargetingFacet:ageRanges"
+      },
+      {
+        "name": "55+",
+        "urn": "urn:li:ageRange:(55,2147483647)",
+        "facetUrn": "urn:li:adTargetingFacet:ageRanges"
+      }
+    ]
+  },
+  {
+    "entityTypes": ["GENDER"],
+    "facetName": "genders",
+    "facetUrn": "urn:li:adTargetingFacet:genders",
+    "availableEntityFinders": ["AD_TARGETING_FACET"],
+    "children": [
+      {
+        "name": "Female",
+        "urn": "urn:li:gender:FEMALE",
+        "facetUrn": "urn:li:adTargetingFacet:genders"
+      },
+      {
+        "name": "Male",
+        "urn": "urn:li:gender:MALE",
+        "facetUrn": "urn:li:adTargetingFacet:genders"
+      }
+    ]
+  },
+  {
+    "entityTypes": ["LOCALE"],
+    "facetName": "interfaceLocales",
+    "facetUrn": "urn:li:adTargetingFacet:interfaceLocales",
+    "availableEntityFinders": ["AD_TARGETING_FACET"],
+    "children": [
+      {
+        "name": "Czech",
+        "urn": "urn:li:locale:cs_CZ",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Danish",
+        "urn": "urn:li:locale:da_DK",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Dutch",
+        "urn": "urn:li:locale:nl_NL",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "English",
+        "urn": "urn:li:locale:en_US",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Filipino",
+        "urn": "urn:li:locale:tl_PH",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "French",
+        "urn": "urn:li:locale:fr_FR",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "German",
+        "urn": "urn:li:locale:de_DE",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Indonesian",
+        "urn": "urn:li:locale:in_ID",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Italian",
+        "urn": "urn:li:locale:it_IT",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Japanese",
+        "urn": "urn:li:locale:ja_JP",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Korean",
+        "urn": "urn:li:locale:ko_KR",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Malaysian",
+        "urn": "urn:li:locale:ms_MY",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Norwegian",
+        "urn": "urn:li:locale:no_NO",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Polish",
+        "urn": "urn:li:locale:pl_PL",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Portuguese",
+        "urn": "urn:li:locale:pt_BR",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Romanian",
+        "urn": "urn:li:locale:ro_RO",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Russian",
+        "urn": "urn:li:locale:ru_RU",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Spanish",
+        "urn": "urn:li:locale:es_ES",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Swedish",
+        "urn": "urn:li:locale:sv_SE",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Thai",
+        "urn": "urn:li:locale:th_TH",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      },
+      {
+        "name": "Turkish",
+        "urn": "urn:li:locale:tr_TR",
+        "facetUrn": "urn:li:adTargetingFacet:interfaceLocales"
+      }
+    ]
+  }
+]

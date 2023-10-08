@@ -1,8 +1,7 @@
 use tokio_postgres::Client;
 
-use crate::common::ParentEntity;
 use crate::common::LinkedInCoreItemType;
-
+use crate::common::ParentEntity;
 
 pub async fn insert(
     client: &Client,
@@ -16,8 +15,25 @@ pub async fn insert(
     )
     .await?;
     let company_type: LinkedInCoreItemType;
-    company_type = LinkedInCoreItemType::COMPANY;
+    company_type = LinkedInCoreItemType::INTERESTS;
     let entity_types = entity.entity_types.first();
+    let null_parent_id: Option<i32> = None;
+    // println!("children from each insertion  {:?}", &entity);
+
+    // Insert Parent
+    client
+        .execute(
+            &stmt,
+            &[
+                &entity.facet_name,
+                &entity.facet_urn,
+                &entity.facet_urn,
+                &null_parent_id,
+                &company_type,
+                &entity_types,
+            ],
+        )
+        .await?;
 
     for child in &entity.children {
         client
@@ -26,7 +42,7 @@ pub async fn insert(
                 &[
                     &child.name,
                     &child.urn,
-                    &child.urn,
+                    &child.facet_urn,
                     &parent_id,
                     &company_type,
                     &entity_types,

@@ -1,5 +1,3 @@
-
-
 use postgres_types::{FromSql, ToSql};
 use serde::{Deserialize, Serialize};
 
@@ -7,6 +5,8 @@ use serde::{Deserialize, Serialize};
 pub struct Entity {
     pub name: String,
     pub urn: String,
+    #[serde(rename = "facetUrn")]
+    pub facet_urn: Option<String>,
 }
 
 #[derive(Debug, Deserialize, Serialize, ToSql, FromSql)]
@@ -28,6 +28,7 @@ pub enum EntityTypes {
     INTEREST,
     SKILL,
     GROUP,
+    MEMBER_BEHAVIOR
 }
 
 #[derive(Debug, Deserialize, Serialize)]
