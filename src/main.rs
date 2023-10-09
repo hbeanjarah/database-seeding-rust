@@ -22,6 +22,14 @@ async fn main() {
         }
     };
 
+    let database_host = match env::var("DATABASE_HOST") {
+        Ok(val) => val,
+        Err(_) => {
+            eprintln!("Error: DATABASE_HOST environment variable not set");
+            return; // Exit the program or handle the error as needed
+        }
+    };
+
     let database_user = match env::var("DATABASE_USER") {
         Ok(val) => val,
         Err(_) => {
@@ -40,10 +48,11 @@ async fn main() {
 
     // Construct the database URL
     let database_url = format!(
-        "postgres://{}:{}@localhost:5432/{}",
-        database_user, database_password, database_name
+        "postgres://{}:{}@{}/{}",
+        database_user, database_password, database_host, database_name
     );
 
+    println!("database url {:?}", database_url);
     let (client, connection) = tokio_postgres::connect(&database_url, NoTls)
         .await
         .expect("Error connecting to the database");
@@ -72,6 +81,31 @@ async fn main() {
                 .expect("Error parsing JSON");
         for (index, el) in linkedin_company_data.iter().enumerate() {
             if let Err(e) = items::linkedin_company::insert(&client, Some(index as i32), el).await {
+                eprintln!("Error inserting data: {}", e);
+            }
+        }
+    } else {
+        println!("is working fine")
+    }
+
+    let insert_location: bool;
+    insert_location = true;
+
+    if insert_location {
+        let location_file_path = Path::new("./src/locations.json");
+        let mut location_file = File::open(location_file_path).expect("Error opening file");
+        let mut location_file_path_json_data = String::new();
+
+        location_file
+            .read_to_string(&mut location_file_path_json_data)
+            .expect("Error reading file");
+
+        let linkedin_company_data: Vec<common::Location> =
+            serde_json::from_str(&location_file_path_json_data).expect("Error parsing JSON");
+
+        // println!("linkedin_company_data {:?}", linkedin_company_data);
+        for el in &linkedin_company_data {
+            if let Err(e) = items::location_insert::insert_data(&client, &el, None).await {
                 eprintln!("Error inserting data: {}", e);
             }
         }

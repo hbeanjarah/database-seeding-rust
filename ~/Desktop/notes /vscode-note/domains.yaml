@@ -1,0 +1,7 @@
+.categories:
+  default:
+    - fc4460
+test:
+  .categories:
+    default:
+      - 97860e

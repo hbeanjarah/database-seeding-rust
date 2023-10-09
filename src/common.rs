@@ -55,6 +55,62 @@ pub enum LinkedInCoreItemType {
 }
 
 #[derive(Debug, Deserialize, Serialize, ToSql, FromSql)]
+pub enum TargetType {
+    COUNTRY,
+    REGION,
+    CITY,
+    NEIGHBORHOOD,
+    #[serde(rename = "POSTAL_CODE")]
+    POSTAL_CODE,
+    AIRPORT,
+    UNIVERSITY,
+    DEPARTMENT,
+    MUNICIPALITY,
+    PROVINCE,
+    COUNTY,
+    #[serde(rename = "NATIONAL_PARK")]
+    NATIONAL_PARK,
+    DISTRICT,
+    #[serde(rename = "CONGRESSIONAL_DISTRICT")]
+    CONGRESSIONAL_DISTRICT,
+    STATE,
+    #[serde(rename = "CITY_REGION")]
+    CITY_REGION,
+    GOVERNORATE,
+    CANTON,
+    TERRITORY,
+    PREFECTURE,
+    #[serde[rename = "AUTONOMOUS_COMMUNITY"]]
+    AUTONOMOUS_COMMUNITY,
+    #[serde[rename = "UNION_TERRITORY"]]
+    UNION_TERRITORY,
+    #[serde[rename = "TV_REGION"]]
+    TV_REGION,
+    BOROUGH,
+    OKRUG,
+}
+
+
+// Data interface for the json data
+#[derive(Deserialize, Serialize, Debug)]
+pub struct Location {
+    #[serde(rename = "googleAudienceId")]
+    pub  google_audience_id: i32,
+    #[serde(rename = "canonicalName")]
+    pub canonical_name: String,
+    #[serde(rename = "parentId")]
+    pub parent_id: Option<i32>,
+    #[serde(rename = "countryCode")]
+    pub country_code: CountryCode,
+    #[serde(rename = "targetType")]
+    pub   target_type: TargetType,
+    #[serde(rename = "Status")]
+    pub status: String,
+    pub children: Vec<Location>,
+}
+
+
+#[derive(Debug, Deserialize, Serialize, ToSql, FromSql)]
 pub enum CountryCode {
     AD,
     AE,
