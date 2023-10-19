@@ -1,8 +1,8 @@
 [
   {
-    "entityTypes": ["COUNTRY_GROUP", "COUNTRY", "STATE", "REGION"],
+    "entityTypes": ["COUNTRY_GROUP"],
     "facetName": "profileLocations",
-    "$URN": "urn:li:adTargetingFacet:profileLocations",
+    "facetUrn": "urn:li:adTargetingFacet:profileLocations",
     "availableEntityFinders": ["AD_TARGETING_FACET", "TYPEAHEAD"],
     "children": [
       {
@@ -64,9 +64,9 @@
     ]
   },
   {
-    "entityTypes": ["COUNTRY_GROUP", "COUNTRY", "STATE", "REGION"],
+    "entityTypes": ["COUNTRY_GROUP"],
     "facetName": "locations",
-    "$URN": "urn:li:adTargetingFacet:locations",
+    "facetUrn": "urn:li:adTargetingFacet:locations",
     "availableEntityFinders": ["AD_TARGETING_FACET", "TYPEAHEAD"],
     "children": [
       {

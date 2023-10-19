@@ -91,7 +91,7 @@ async fn main() {
     }
 
     let insert_location: bool;
-    insert_location = true;
+    insert_location = false;
 
     if insert_location {
         let location_file_path = Path::new("./src/locations.json");

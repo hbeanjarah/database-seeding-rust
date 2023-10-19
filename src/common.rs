@@ -28,7 +28,8 @@ pub enum EntityTypes {
     INTEREST,
     SKILL,
     GROUP,
-    MEMBER_BEHAVIOR
+    MEMBER_BEHAVIOR,
+    COUNTRY_GROUP
 }
 
 #[derive(Debug, Deserialize, Serialize)]
